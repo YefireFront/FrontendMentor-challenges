@@ -29,15 +29,20 @@ $font4: 'Roboto', sans-serif;
 
 body{
 
+    font-family: $font;
+
 }
 
 li{
     list-style: none;
 }
 
+.conainer{
+    padding: 0px 0.5rem;
+}
 .nav{
     width: 100%;
-    background-color: $Soft-red;
+
 
     &:target .nav__list{
         height: 300px; 
@@ -81,10 +86,56 @@ li{
     }
 }
 
+.main{
+
+    &__left{
+        display: flex;
+        flex-direction: column;
+    
+        img{
+            width: 100%;
+        }
+
+        h2{
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+        
+        p{
+            color: $Dark-grayish-blue;
+            line-height: 1.7;
+            margin: 10px 0;
+        }
+
+        button{
+
+            padding: 0.8rem 2rem;
+            border: none;
+            background-color: $Soft-red;
+            color: $Off-white;
+            letter-spacing: 2px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 10px 0;
+            width: 200px;
+
+        }
+    }
+}
+
 
 @media (min-width: 760px){
 
     .nav{
+        display: flex;
+        justify-content: space-between;
+        background-color: $Off-white;
+        
+        &__img-menu{
+            display: none;
+        }
+
         &__list{
             height: auto;
             flex-direction: row;
