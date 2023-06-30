@@ -128,11 +128,42 @@ strong:hover{
     background-color: $Light-grayish-blue-1;
 }
 
-.unread .description p:first-of-type::after{
-    content: "";
-    background-color: $Red;
-    width: 10px;
-    height: 10px;
-    display: inline;
-    border-radius: 50%;
+.unread p:first-of-type::after{
+    content: ""; /* Define el contenido del pseudo-elemento ::after como una cadena vacía */
+    background-color: $Red; /* Establece el color de fondo del pseudo-elemento ::after utilizando una variable llamada $Red */
+    width: 10px; /* Establece un ancho de 10 píxeles para el pseudo-elemento ::after */
+    height: 10px; /* Establece una altura de 10 píxeles para el pseudo-elemento ::after */
+    display: inline-block; /** Muestra el pseudo-elemento ::after como un elemento en línea con dimensiones */
+    border-radius: 50%; /* Establece un radio de borde del 50% para crear una forma de círculo en el pseudo-elemento ::after */
+}
+
+
+.message_card{
+    display: flex;
+    align-items: center;
+}
+
+.message{
+    padding: 1rem;
+    border: 1px solid $Light-grayish-blue-2;
+    border-radius: .3rem;
+    cursor: pointer;
+    margin: 0 0 0 5rem;
+}
+
+.message:hover{
+    background-color: $Light-grayish-blue-1;
+}
+
+.chess_img{
+    margin-left: auto;
+}
+
+
+@media screen and (max-width: 550px) {
+
+    .container{
+        margin: 0;
+    }
+    
 }
