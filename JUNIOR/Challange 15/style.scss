@@ -53,6 +53,7 @@ header{
 .notif_box{
     display: flex; /* Aplica el modelo de caja flexible al elemento con la clase 'notif_box' */
     align-items: center; /* Centra verticalmente los elementos secundarios dentro de 'notif_box' */
+    justify-content: start;
 }
 
 
@@ -62,7 +63,7 @@ header{
     display: flex; /* Aplica el modelo de caja flexible al elemento con el id 'notificacion' */
     align-items: center; /* Centra verticalmente los elementos secundarios dentro de 'notificacion' */
     justify-content: center; /* Centra horizontalmente los elementos secundarios dentro de 'notificacion' */
-    margin-left: 5rem; /* Establece un margen izquierdo de 5 rem (unidad relativa) para el elemento con el id 'notificacion' */
+    margin-left: 1.5rem; /* Establece un margen izquierdo de 5 rem (unidad relativa) para el elemento con el id 'notificacion' */
     color: $White; /* Establece el color de texto del elemento con el id 'notificacion' utilizando una variable llamada $White */
     background-color: $Blue; /* Establece el color de fondo del elemento con el id 'notificacion' utilizando una variable llamada $Blue */
     font-weight: 800; /* Establece el grosor de fuente del elemento con el id 'notificacion' a 800 */
@@ -139,31 +140,32 @@ strong:hover{
 
 
 .message_card{
-    display: flex;
-    align-items: center;
+    display: flex; /* Aplica el modelo de caja flexible al elemento con la clase 'message_card' */
+    align-items: center; /* Centra verticalmente los elementos secundarios dentro de 'message_card' */
 }
+
 
 .message{
-    padding: 1rem;
-    border: 1px solid $Light-grayish-blue-2;
-    border-radius: .3rem;
-    cursor: pointer;
-    margin: 0 0 0 5rem;
+    padding: 1rem; /* Establece un relleno de 1 rem alrededor del elemento con la clase 'message' */
+    border: 1px solid $Light-grayish-blue-2; /* Establece un borde de 1 píxel sólido con un color definido por la variable $Light-grayish-blue-2 */
+    border-radius: .3rem; /* Establece un radio de borde de 0.3 rem para redondear las esquinas del elemento con la clase 'message' */
+    cursor: pointer; /* Establece el cursor del elemento con la clase 'message' como un puntero */
+    margin: 0 0 0 5rem; /* Establece un margen de 0 en la parte superior, inferior y derecha, y un margen izquierdo de 5 rem para el elemento con la clase 'message' */
 }
 
+
 .message:hover{
-    background-color: $Light-grayish-blue-1;
+    background-color: $Light-grayish-blue-1; /* Cambia el color de fondo del elemento con la clase 'message' a través de un pseudo-estado de 'hover' utilizando una variable llamada $Light-grayish-blue-1 */
 }
 
 .chess_img{
-    margin-left: auto;
+    margin-left: auto; /* Establece un margen izquierdo automático para el elemento con la clase 'chess_img' para empujarlo hacia la derecha dentro de su contenedor */
 }
 
 
-@media screen and (max-width: 550px) {
 
+@media screen and (max-width: 550px) {
     .container{
-        margin: 0;
+        margin: 0; /* Establece un margen de 0 para el elemento con la clase 'container' solo cuando la anchura de la pantalla sea igual o menor a 550 píxeles */
     }
-    
 }
