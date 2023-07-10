@@ -53,9 +53,63 @@
             oninput="if(this.value.length > this.maxlength) this.value=this.value.slice(0,this.maxlength)"
             minlength="16"
             maxlength="16"
-            placeholder="e.g. 1234 5678 9123 0000">
+            placeholder="e.g. 1234 5678 9123 0000"
+            required>
           </div>
+          
+          <div class="card_information">
+            <div id="card_date">
+              <label for="card_date">  Exp. Date (MM/YY)</label>
+              <div class="two_ino">
+                <div>
+                  <input 
+                  type="number"
+                  placeholder="MM"
+                  oninput="if(this.value.length > this.maxlength) this.value=this.value.slice(0,this.maxlength)"
+                  minlength="2"
+                  maxlength="2"
+                  id="card_month"
+                  required
+                  >
+                </div>
+                <div>
+                  <input 
+                  type="number"
+                  placeholder="YY"
+                  oninput="if(this.value.length > this.maxlength) this.value=this.value.slice(0,this.maxlength)"
+                  minlength="2"
+                  maxlength="2"
+                  id="card_year"
+                  required
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="grid_4">
+              <label for="card_cvc">CVC</label>
+              <input type="number" 
+              oninput="if(this.value.length > this.maxlength) this.value=this.value.slice(0,this.maxlength)"
+              minlength="3"
+              maxlength="3"
+              placeholder=" e.g. 123"
+              id="card_cvc"
+              required              
+              >
+            </div>
+          </div>
+
+          <button id="submit_btn" type="submit">Confirm</button>
         </form>
+
+        <div class="thank hidden">
+          <img src="./images/icon-complete.svg" alt="">
+          <h1>Thank you!</h1>
+          <p>We've added your card details</p>
+          <button> Continue</button>
+        </div>
+
+
       </div>
     </div>
   </main>
@@ -64,20 +118,12 @@
 
   
 
-  Exp. Date (MM/YY)
-  MM
-  YY
 
-  CVC
-  e.g. 123
+ 
 
-  Confirm
 
-  <!-- Completed state start -->
+  
 
-  Thank you!
-  We've added your card details
-  Continue
 
 </body>
 </html>
